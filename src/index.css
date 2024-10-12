@@ -1,6 +1,15 @@
 *{
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   color: white;
   font-family: monospace;
+}
+
+:root{
+  --color1:#000000;
+  --color2:#001f36;
+  --color3:#1c5560;
+  --color4:#79ae92;
+  --color5:#63abfd;
 }

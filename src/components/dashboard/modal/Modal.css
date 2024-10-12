@@ -1,0 +1,33 @@
+.modal-content{
+    background-color: var(--color3);
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    .button-close{
+        color: var(--color5);
+        background: none;
+        border: none;
+        width: 30px;
+        border-radius: 4px;
+        font-size: 1.3rem;
+    }
+}
+.modal-body{
+    input{
+        background: none;
+    }
+    select{
+        background: none;
+        option{
+            background-color: var(--color5);
+        }
+    }
+}
+.form{
+    .form--statistics{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
