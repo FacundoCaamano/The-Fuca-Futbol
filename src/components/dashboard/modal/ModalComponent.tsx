@@ -1,20 +1,26 @@
 
+import { useContext } from 'react'
 import './Modal.css'
+import { PlayersContext } from '../../../context/PlayersContext'
 export const ModalComponent=()=>{
-    const players: any[] = JSON.parse(localStorage.getItem('jugadores') || '[]');
-    
+    const context = useContext(PlayersContext);
+    if (!context) {
+        // Manejo del caso cuando el contexto es undefined
+        return <div>Error: Contexto no encontrado</div>;
+    }
+    const { addPlayer } = context;
     function formSubmit(event:any):void{
         event?.preventDefault()
         
-        players.push({
+        const newPlayer={
             nombre:event?.target.namePlayer.value,
             velocidad:event?.target.velocidad.value,
             pase:event?.target.pase.value,
             remate:event?.target.remate.value,
             defensa:event?.target.defensa.value
-        })
+        }
         
-        localStorage.setItem('jugadores',JSON.stringify(players))
+        addPlayer(newPlayer)
     }
     
     return(

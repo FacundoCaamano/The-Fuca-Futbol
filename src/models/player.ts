@@ -8,3 +8,8 @@ export interface Player {
     defensa: statistics
 }
 
+export interface PlayerContextType{
+    players: Player[];
+    addPlayer: (player:Player) => void
+}
+
