@@ -1,6 +1,7 @@
 import { statistics } from "./types";
 
 export interface Player {
+    id:string;
     nombre: string;
     velocidad: statistics;
     pase:statistics;

@@ -1,0 +1,13 @@
+.cardsPlayersContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 50vw;
+    padding: 20px;
+}
+
+@media screen and (max-width:1000px) {
+    .cardsPlayersContainer{ 
+        width: 90vw;      
+    }
+}

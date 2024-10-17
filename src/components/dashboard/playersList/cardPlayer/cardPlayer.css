@@ -1,0 +1,26 @@
+.cardPlayer{
+    background-color: var(--color6); /* Cambia el color según prefieras */
+    width: 200px;
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); 
+    border-radius: 10px 10px 80px 80px;
+    border: 10px solid var(--color2);
+    border-bottom: 100px solid var(--color2);
+    .cardPlayer--buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        width: 100%;
+        top: 110%;
+        .cardPlayer--buttons__element{
+            background-color: var(--color5);
+            width: 60px;
+            border: none;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    }
+}

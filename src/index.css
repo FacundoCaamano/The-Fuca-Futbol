@@ -2,14 +2,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: white;
   font-family: monospace;
 }
 
 :root{
-  --color1:#000000;
-  --color2:#001f36;
-  --color3:#1c5560;
-  --color4:#79ae92;
-  --color5:#63abfd;
+  --color1:#fffff7;
+  --color2:#e9fccf;
+  --color3:#d8fcb3;
+  --color4:#b1fcb3;
+  --color5:#89fcb3;
+  --color6:#f2f2f2;
 }

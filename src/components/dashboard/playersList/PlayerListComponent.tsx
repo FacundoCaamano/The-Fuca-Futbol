@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { PlayersContext } from "../../../context/PlayersContext"
-
+import { CardPlayerComponent } from "./cardPlayer/cardPlayerComponent"
+import './PlayerList.css'
 export const PlayersListComponent=()=>{
     const context = useContext(PlayersContext)
     if(!context){
@@ -14,16 +15,12 @@ export const PlayersListComponent=()=>{
     
     return(
         <div>
-            <h3>lista</h3>
-            {players.map((player,index)=>(
-                <div key={index}>
-                     <h3>{player.nombre}</h3>
-                    <p>Velocidad: {player.velocidad}</p>
-                    <p>Pase: {player.pase}</p>
-                    <p>Remate: {player.remate}</p>
-                    <p>Defensa: {player.defensa}</p>
+            <h3>Jugadores</h3>
+            <div className="cardsPlayersContainer">
+            {players.map((player)=>(
+                    <CardPlayerComponent player={player} key={player.id}></CardPlayerComponent>
+                ))}
                 </div>
-            ))}
         </div>
     )
 }

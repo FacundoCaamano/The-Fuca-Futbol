@@ -2,6 +2,7 @@
 import { useContext } from 'react'
 import './Modal.css'
 import { PlayersContext } from '../../../context/PlayersContext'
+import { generateId } from '../../../utils/idGenerator';
 export const ModalComponent=()=>{
     const context = useContext(PlayersContext);
     if (!context) {
@@ -13,6 +14,7 @@ export const ModalComponent=()=>{
         event?.preventDefault()
         
         const newPlayer={
+            id: generateId(),
             nombre:event?.target.namePlayer.value,
             velocidad:event?.target.velocidad.value,
             pase:event?.target.pase.value,
