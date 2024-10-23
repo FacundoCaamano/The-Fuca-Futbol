@@ -2,14 +2,27 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: monospace;
+  font-family: Montserrat, sans-serif;
+}
+a{
+  text-decoration: none;
+  list-style: none;
 }
 
 :root{
-  --color1:#fffff7;
-  --color2:#e9fccf;
-  --color3:#d8fcb3;
-  --color4:#b1fcb3;
+  --color1:rgb(217, 217, 217);
+  --color2: rgb(206, 236, 232);
+  --color3:rgb(5, 97, 84);
+  --color4:black;
   --color5:#89fcb3;
   --color6:#f2f2f2;
+}
+.active{
+  color: black;
+  background-color: var(--color3);
+  transition: ease all 0.3s;
+}
+.disabled{
+  color: black;
+  transition: ease all 0.3s;
 }

@@ -1,5 +1,33 @@
+body{
+  background-color: var(--color1);
+}
 .app-container{
-    background-color: var(--color1);
-    padding: 10px;
     min-height:100vh;
   }
+.title{
+  color: var(--color4);
+  font-size: 2rem;
+}  
+.titleContainer{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 50px;
+  background-color: white;
+  border-bottom: 1px solid black;
+  height: 10vh;
+  width: 100vw;
+  top: 0px;
+  position: fixed;
+  z-index: 100;
+}
+.navBarPagesContainer{
+  margin-top: 10vh;
+  margin-left:15vw;
+  display: flex;
+  height: 90vh;
+}
+.pages{
+  height: 100%;
+  width: 100%;
+}
