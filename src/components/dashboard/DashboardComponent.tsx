@@ -6,9 +6,9 @@ export const DashboardComponent = () =>{
     
     return(
         <div className="dashboard">
-            <div className="dashboard--newPlayer" data-bs-toggle="modal" data-bs-target="#modalNewPlayer">
+            <div className="dashboard--newPlayer" >
                     <h3 className="titleListComponent">Jugadores</h3>
-                    <button className="dashboard--newPlayer__button">Crear nuevo jugador</button> 
+                    <button className="dashboard--newPlayer__button" data-bs-toggle="modal" data-bs-target="#modalNewPlayer">Crear nuevo jugador</button> 
             </div>
             <ModalComponent></ModalComponent>
             <div className='dashboard--list'>

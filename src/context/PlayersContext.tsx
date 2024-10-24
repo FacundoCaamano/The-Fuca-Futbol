@@ -17,8 +17,14 @@ export const PlayersProvider = ({ children }: { children: ReactNode }) => {
         localStorage.setItem('jugadores', JSON.stringify(updatedPlayers));
     };
 
+    const deletePlayer = (playerId:string):void=>{
+            const updatedPlayers = players.filter(p => p.id !== playerId)
+            setPlayers(updatedPlayers)
+            localStorage.setItem('jugadores', JSON.stringify(updatedPlayers))        
+    }
+
     return (
-        <PlayersContext.Provider value={{ players, addPlayer }}>
+        <PlayersContext.Provider value={{ players, addPlayer, deletePlayer }}>
             {children}
         </PlayersContext.Provider>
     );

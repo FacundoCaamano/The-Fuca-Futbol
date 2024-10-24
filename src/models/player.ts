@@ -12,5 +12,6 @@ export interface Player {
 export interface PlayerContextType{
     players: Player[];
     addPlayer: (player:Player) => void
+    deletePlayer:(playerId:string) => void
 }
 
