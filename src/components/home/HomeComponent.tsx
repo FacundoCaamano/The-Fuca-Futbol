@@ -6,20 +6,22 @@ export const HomeComponent = () =>{
         <>
             <div className='homeContainer'>
                 <div>
-
+                <hr />
                 <h2>Balanceador de Equipos de Fútbol</h2>
                 <p>
-                    organiza los equipos de tus partidos agregando a jugadores y asignandoles estadísticas para balancear los equipos de manera equitativa.
+                    Organiza los equipos de tus partidos agregando a jugadores y asignandoles estadísticas para balancear los equipos de manera equitativa.
                 </p>
+                <hr />
                 </div>
                     <div className='cardDashboard'>
-                    <Link to="/dashboard" >
                         <div className='cardDashboardLink'>
-                            <h2>Agregar y Balancear Jugadores</h2>
-                            <p>Haz clic aquí para agregar jugadores y formar equipos balanceados.</p>
+                            <h3>Agregar y Balancear Jugadores</h3>
+                        <Link to="/dashboard" >
+                            <p className='buttonHome'>Haz clic aquí para agregar jugadores y formar equipos balanceados.</p>
+                        </Link>
                         </div>
-                    </Link>
                     </div>
+                    <hr />
             </div>
         </>
     )

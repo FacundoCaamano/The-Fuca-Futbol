@@ -12,14 +12,15 @@ a{
 :root{
   --color1:rgb(217, 217, 217);
   --color2: rgb(206, 236, 232);
-  --color3:rgb(5, 97, 84);
+  --color3:rgb(8, 161, 140);
   --color4:black;
   --color5:#89fcb3;
   --color6:#f2f2f2;
 }
 .active{
   color: black;
-  background-color: var(--color3);
+  background-color: rgb(8, 161, 140, 0.5);
+  border-right: 10px groove var(--color3);
   transition: ease all 0.3s;
 }
 .disabled{

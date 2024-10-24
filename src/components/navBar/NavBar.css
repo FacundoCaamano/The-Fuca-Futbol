@@ -1,11 +1,12 @@
 .navBar{
     height: 100%;
-    border-right: 1px solid black;
+    box-shadow: 0.2px 0px #575757;
     margin-right: 20px;
     width: 15vw;
     background-color: white;
     left: 0px;
     position: fixed;
+    box-shadow: inset;
     ul{
         padding: 10px 0 0 0px;
         margin: 0;

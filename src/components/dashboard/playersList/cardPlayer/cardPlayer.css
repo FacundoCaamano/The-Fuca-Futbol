@@ -1,26 +1,66 @@
-.cardPlayer{
-    background-color: var(--color6); /* Cambia el color según prefieras */
-    width: 200px;
+.cardPlayer {
+    background: linear-gradient(135deg, var(--color4 ), var(--color3)); /* Degradado de color */
+    padding: 20px;
+    width: 220px;
     text-align: center;
+    border-radius: 20px; /* Borde redondeado completo */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); 
-    border-radius: 10px 10px 80px 80px;
-    border: 10px solid var(--color2);
-    border-bottom: 100px solid var(--color2);
-    .cardPlayer--buttons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        position: absolute;
-        width: 100%;
-        top: 110%;
-        .cardPlayer--buttons__element{
-            background-color: var(--color5);
-            width: 60px;
-            border: none;
-            padding: 5px;
-            border-radius: 3px;
-        }
+    overflow: hidden;
+}
+.cardPlayer:hover {
+    transform: translateY(-3px); /* Levanta la tarjeta */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+
+.cardPlayer h2 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+/* Estilo para las estadísticas del jugador */
+.cardPlayer p {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+/* Elemento decorativo en la parte superior */
+.cardPlayer::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Posicionar el contenido por encima del elemento decorativo */
+.cardPlayer h2, .cardPlayer p {
+    position: relative;
+    z-index: 1;
+}
+
+.cardPlayer--buttons{
+    display: flex;
+    justify-content: space-around;
+    .cardPlayer--buttons__element{
+        cursor: pointer;
+        font-family: Montserrat, sans-serif;
+        color: rgb(255, 255, 255);
+        background-color: rgb(8, 161, 140);
+        font-weight: 700;
+        font-size: 16px;
+        border-style: initial;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 4px;
+        padding: 16px;
+
     }
 }

@@ -3,7 +3,7 @@ import './App.css'
 import { AppRouter } from './routes/AppRouter'
 import { PlayersProvider } from './context/PlayersContext'
 import football from './assets/football.png'
-import { NavBar } from './components/dashboard/navBar/NavBarComponent'
+import { NavBar } from './components/navBar/NavBarComponent'
 function App() {
   return (
     <PlayersProvider>
@@ -16,7 +16,7 @@ function App() {
         </div>
         </Link>
         <div className='navBarPagesContainer'>
-          <NavBar></NavBar>
+          <NavBar/>
           <div className='pages'>
             <AppRouter/>
           </div>
