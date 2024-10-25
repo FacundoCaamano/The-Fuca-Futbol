@@ -1,10 +1,10 @@
 .cardPlayer {
-    background: linear-gradient(135deg, var(--color4 ), var(--color3)); /* Degradado de color */
+    background: linear-gradient(135deg, var(--color4 ), var(--color3));
     padding: 20px;
     width: 220px;
     text-align: center;
-    border-radius: 20px; /* Borde redondeado completo */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    border-radius: 20px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     color: white;
     font-family: 'Arial', sans-serif;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -12,8 +12,33 @@
     overflow: hidden;
 }
 .cardPlayer:hover {
-    transform: translateY(-3px); /* Levanta la tarjeta */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+    transform: translateY(-3px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); 
+}
+.cardPlayer--extend{
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+    z-index: 10000;
+    transform: scale(1.5);
+    background: linear-gradient(135deg, var(--color4 ), var(--color3)); 
+    padding: 10px;
+    width: 220px;
+    text-align: center;
+    border-radius: 20px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    color: white;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+.cardPlayer--extend__elements{
+    div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
 }
 
 .cardPlayer h2 {
@@ -49,7 +74,9 @@
 
 .cardPlayer--buttons{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     .cardPlayer--buttons__element{
         cursor: pointer;
         font-family: Montserrat, sans-serif;
@@ -60,7 +87,8 @@
         border-style: initial;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         border-radius: 4px;
-        padding: 16px;
-
+        padding: 10px;
+        
     }
+
 }

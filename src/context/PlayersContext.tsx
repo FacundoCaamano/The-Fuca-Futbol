@@ -23,8 +23,16 @@ export const PlayersProvider = ({ children }: { children: ReactNode }) => {
             localStorage.setItem('jugadores', JSON.stringify(updatedPlayers))        
     }
 
+    const updatedPlayer=(updatedPlayer:Player)=>{
+        console.log(updatedPlayer);
+        
+         const updatedPlayers = players.map(player => player.id === updatedPlayer.id ? updatedPlayer : player)
+         setPlayers(updatedPlayers)
+         localStorage.setItem('jugadores', JSON.stringify(updatedPlayers))
+    }
+    
     return (
-        <PlayersContext.Provider value={{ players, addPlayer, deletePlayer }}>
+        <PlayersContext.Provider value={{ players, addPlayer, deletePlayer,updatedPlayer }}>
             {children}
         </PlayersContext.Provider>
     );
