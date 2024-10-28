@@ -37,9 +37,13 @@ export const userTeamBalanced = () =>{
             if(team1Score <= team2Score){
                 team1.push(player)
                 team1Score += playerScore
+                console.log(team1Score);
+                
             }else{
                 team2.push(player)
                 team2Score += playerScore
+                console.log(team2Score);
+                
             }
         }
 

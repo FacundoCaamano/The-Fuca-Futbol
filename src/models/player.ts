@@ -14,7 +14,7 @@ export const STATISTICS_VALUE: { [key in statistics]: number } = {
     "Alta": 4,
     "Media": 3,
     "Baja": 2,
-    "Muy Baja": 1
+    "MuyBaja": 1
 };
 
 export interface PlayerContextType{

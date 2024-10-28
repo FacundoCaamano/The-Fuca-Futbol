@@ -24,6 +24,7 @@ export const TeamsComponent = () =>{
             <div className="playersSelected">
                 <h3>Jugadores seleccionados</h3>
                 <table>
+                    <thead>
                         <tr>
                             <th>nombre</th>
                             <th>Defensa</th>
@@ -32,18 +33,21 @@ export const TeamsComponent = () =>{
                             <th>remate</th>
                             <th></th>
                         </tr>
+                    </thead>
+                    <tbody>
                         {players.map(p=> 
-                    
-                                <tr>
+                                <tr key={p.id}>
                                     <td>{p.nombre}</td>
                                     <td>{p.defensa}</td>
                                     <td>{p.velocidad}</td>
                                     <td>{p.pase}</td>
                                     <td>{p.remate}</td>
+                                    <td>
                                     <button onClick={()=>removePlayer(p.id)} className="button--remove">Quitar</button> 
+                                    </td>
                                 </tr>
-                           
                         )}
+                        </tbody>
                 </table>
                 <button onClick={()=>balanceTeams()} className="button-balance">Balancear</button>
             </div>

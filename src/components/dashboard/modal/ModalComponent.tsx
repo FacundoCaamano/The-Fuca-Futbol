@@ -53,7 +53,7 @@ export const ModalComponent=()=>{
                                         <option value="Alta">Alta</option>
                                         <option value="Media">Media</option>
                                         <option value="Baja">Baja</option>
-                                        <option value="Muy baja">Muy baja</option>
+                                        <option value="MuyBaja">Muy baja</option>
                                     </select>
                                     </div>
                                     <div>
@@ -64,7 +64,7 @@ export const ModalComponent=()=>{
                                         <option value="Alta">Alta</option>
                                         <option value="Media">Media</option>
                                         <option value="Baja">Baja</option>
-                                        <option value="Muy baja">Muy baja</option>
+                                        <option value="MuyBaja">Muy baja</option>
                                     </select>
                                     </div>
                                     <div>
@@ -75,7 +75,7 @@ export const ModalComponent=()=>{
                                         <option value="Alta">Alta</option>
                                         <option value="Media">Media</option>
                                         <option value="Baja">Baja</option>
-                                        <option value="Muy baja">Muy baja</option>
+                                        <option value="MuyBaja">Muy baja</option>
                                     </select>
                                     </div>
                                     <div>
@@ -86,7 +86,7 @@ export const ModalComponent=()=>{
                                         <option value="Alta">Alta</option>
                                         <option value="Media">Media</option>
                                         <option value="Baja">Baja</option>
-                                        <option value="Muy baja">Muy baja</option>
+                                        <option value="MuyBaja">Muy baja</option>
                                     </select>
                                     </div>
                                 </div>
