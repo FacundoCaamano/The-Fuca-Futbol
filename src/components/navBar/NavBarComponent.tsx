@@ -16,12 +16,17 @@ export const NavBar = () => {
                             Lista de jugadores
                         </li>
                 </NavLink>
-                <NavLink to="/"
+                <NavLink to="/teams"
                        className={({ isActive }) => (isActive ? 'active' : 'disabled')}>
+                        <li>
+                            Crear equipos
+                        </li>
+                </NavLink>
+                <div data-bs-toggle="modal" data-bs-target="#modalNewPlayer" className='createPlayer'>
                         <li>
                             Crear jugador
                         </li>
-                </NavLink>
+                </div>
             </ul>
         </nav>
     )

@@ -18,3 +18,9 @@
         }
     }
 }
+.createPlayer{
+    cursor: pointer;
+}
+.createPlayer:hover{
+    background-color: var(--color3);
+}
