@@ -5,7 +5,7 @@ import './Teams.css'
 export const TeamsComponent = () =>{
     const context = useContext(PlayersContext)
     const playersContext=context?.players
-    const {addPlayer,players,removePlayer,balanceTeams,team1,team2} = userTeamBalanced()
+    const {addPlayer,players,removePlayer,balanceTeams,team1,team2,team1Score,team2Score} = userTeamBalanced()
     
     return(
         <>
@@ -16,7 +16,7 @@ export const TeamsComponent = () =>{
                     {playersContext?.map(player => (
                         <div key={player.id} className="player-card">
                             <span>{player.nombre}</span>
-                            <button onClick={() => addPlayer(player)} className="button-add">Agregar</button>
+                            <button onClick={() => addPlayer(player)} className={players.includes(player) ? 'button-disabled' : 'button-add'} disabled={players.includes(player)} >Agregar</button>
                         </div>
                     ))}
                 </div>
@@ -56,14 +56,20 @@ export const TeamsComponent = () =>{
                 <div className="team">
                     <h4>Equipo 1</h4>
                     {team1.map(p => (
+                     
                     <h5 key={p.id}>{p.nombre}</h5>
+                      
                     ))}
+                    <p>Score {team1Score}</p>
                 </div>
                 <div className="team">
                     <h4>Equipo 2</h4>
                     {team2.map(p => (
-                    <h5 key={p.id}>{p.nombre}</h5>
+                      
+                            <h5 key={p.id}>{p.nombre}</h5>
+                        
                     ))}
+                    <p>Score {team2Score}</p>
                 </div>
             </div>
         </>

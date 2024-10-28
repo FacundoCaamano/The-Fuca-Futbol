@@ -5,6 +5,8 @@ export const userTeamBalanced = () =>{
     const [players, setPlayer]=useState<Player[]>([])
     const [team1, setTeam1] = useState<Player[]>([])
     const [team2, setTeam2] = useState<Player[]>([])
+    const [team1Score, setTeam1Score] = useState(0);
+    const [team2Score, setTeam2Score] = useState(0);
 
     const addPlayer = (player:Player) =>{
         setPlayer(prevState => [...prevState, player])
@@ -24,15 +26,24 @@ export const userTeamBalanced = () =>{
         );
     };
 
+    const shufflePlayers = (players: Player[]): Player[] => {
+        return players
+            .map(player => ({ player, sort: Math.random() }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({ player }) => player);
+    };
+
     const balanceTeams = () => {
-        const sortPlayer = [...players].sort((a,b)=> calculateScore(b) - calculateScore(a))
+        const shuffledPlayers = shufflePlayers(players);
+        const sortedPlayers = shuffledPlayers.sort((a, b) => calculateScore(b) - calculateScore(a));
+        
         const team1: Player[] = []
         const team2: Player[] = []
-
         let team1Score = 0;
         let team2Score = 0;
 
-        for (const player of sortPlayer){
+
+        for (const player of sortedPlayers){
             const playerScore = calculateScore(player)
             if(team1Score <= team2Score){
                 team1.push(player)
@@ -49,6 +60,8 @@ export const userTeamBalanced = () =>{
 
         setTeam1(team1)
         setTeam2(team2)
+        setTeam1Score(team1Score); // Guardar el puntaje total de team1
+        setTeam2Score(team2Score); 
 
     }
 
@@ -58,6 +71,8 @@ export const userTeamBalanced = () =>{
         removePlayer,
         team1,
         team2,
+        team1Score,
+        team2Score,
         balanceTeams
     };
 }

@@ -19,6 +19,14 @@
     cursor: pointer;
     transition: ease all 0.4s;
 }
+.button-disabled{
+    padding: 5px 10px;
+    background-color: var(--color2);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: ease all 1s;
+}
 .player-card {
     display: flex;
     align-items: center;
