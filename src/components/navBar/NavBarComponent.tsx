@@ -22,11 +22,6 @@ export const NavBar = () => {
                             Crear equipos
                         </li>
                 </NavLink>
-                <div data-bs-toggle="modal" data-bs-target="#modalNewPlayer" className='createPlayer'>
-                        <li>
-                            Crear jugador
-                        </li>
-                </div>
             </ul>
         </nav>
     )

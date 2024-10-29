@@ -1,3 +1,18 @@
+.playersEmpty{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    .LinkDashboard{
+        background-color: green;
+        color: white;
+        padding: 10px;  
+        border-style: initial;
+        border-radius: 10px;
+        p{
+            margin: 0;
+        }
+    }
+}
 .players{
     display: flex;
     justify-content: center;

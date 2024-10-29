@@ -2,6 +2,8 @@ import { useContext } from "react"
 import { PlayersContext } from "../../context/PlayersContext"
 import { userTeamBalanced } from "../../hooks/useTeamBalancer"
 import './Teams.css'
+import { NavLink} from "react-router-dom"
+
 export const TeamsComponent = () =>{
     const context = useContext(PlayersContext)
     const playersContext=context?.players
@@ -12,6 +14,20 @@ export const TeamsComponent = () =>{
              <h3>crear equipos</h3>
             <div className="players">
             <h3>Selecciona a los participantes</h3>
+            {
+                playersContext?.length ? 'jugadores ' :
+                <div data-bs-toggle="modal" data-bs-target="#modalNewPlayer" className="playersEmpty">
+                    <div>
+                        <p>todavía no sé ha creado ningún jugador</p>
+                    </div>
+                    <NavLink  to='/dashboard'>
+                        <div className="LinkDashboard">
+                            <p>Crear jugador</p>
+                        </div>
+                    </NavLink>
+                </div>
+            }
+            
                 <div className="players-grid">
                     {playersContext?.map(player => (
                         <div key={player.id} className="player-card">
