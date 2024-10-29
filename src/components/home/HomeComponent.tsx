@@ -9,7 +9,7 @@ export const HomeComponent = () =>{
                 <hr />
                 <h2>Balanceador de Equipos de Fútbol</h2>
                 <p>
-                    Organiza los equipos de tus partidos agregando a jugadores y asignandoles estadísticas para balancear los equipos de manera equitativa.
+                    Organiza los equipos de tus partidos agregando a jugadores y asignándoles estadísticas para balancear los equipos de manera equitativa.
                 </p>
                 <hr />
                 </div>
