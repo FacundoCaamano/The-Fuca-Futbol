@@ -1,18 +1,22 @@
 import { Link,BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
 import { AppRouter } from './routes/AppRouter'
-import { PlayersProvider } from './context/PlayersContext'
+
 import football from './assets/football.png'
 import { NavBar } from './components/navBar/NavBarComponent'
+import { useTheme } from './context/ThemeContext'
+
+
 function App() {
+  const { isDarkMode } = useTheme();
   return (
-    <PlayersProvider>
+    
     <Router>
-      <div className='app-container'>
+      <div className={isDarkMode ? 'appContainer-darkmode' : 'appContainer'} >
         <Link to='/home'>
-        <div className='titleContainer'>
+        <div className={isDarkMode ? 'titleContainer darkMode' : 'titleContainer'}>
           <img src={football} alt="icon" />
-          <h1 className='title'>The Fuca Futbol</h1>
+          <h1 className={isDarkMode ? 'titleDark' : 'title'}>The Fuca Futbol</h1>
         </div>
         </Link>
         <div className='navBarPagesContainer'>
@@ -23,7 +27,6 @@ function App() {
         </div>
       </div>
     </Router>
-    </PlayersProvider>
   )
 }
 

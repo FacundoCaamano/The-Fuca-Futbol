@@ -25,6 +25,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
 .button-add{
     padding: 5px 10px;
     background-color: var(--color3);
@@ -50,6 +51,9 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
+}
+.player-card.dark{
+    background-color: #222;
 }
 .button--remove{
     padding: 5px 10px;
@@ -77,23 +81,30 @@
 }
 table {
     width: 50%;
-    border-collapse: collapse; /* Asegura que no haya espacios entre los bordes de las celdas */
+    border-collapse: collapse; 
     margin-top: 10px;
 }
 
 th, td {
-    border: 1px solid #ddd; /* Aplica un borde a las celdas */
-    padding: 8px; /* Agrega espaciado interno a las celdas */
-    text-align: center; /* Centra el texto en las celdas */
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: center; 
 }
 
-th {
-    background-color: var(--color2); /* Color de fondo para los encabezados */
+.trHead {
+    background-color: var(--color2); 
+    font-weight: bold;
+}
+.trDark{
+    background-color: var(--color3); 
     font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background-color: var(--color1); /* Color de fondo alternativo para filas */
+    background-color: var(--color1); 
+}
+.darkTr:nth-child(even) {
+    background-color: var(--color4); 
 }
 
 .button-balance{
@@ -124,7 +135,13 @@ tr:nth-child(even) {
     width: 45%;
     text-align: center;
 }
-
+.teamDark{
+    background-color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    width: 45%;
+    text-align: center;
+}
 .team h4 {
     margin-bottom: 10px;
     font-size: 1.2em;
@@ -136,4 +153,7 @@ tr:nth-child(even) {
     margin: 5px 0;
     font-weight: normal;
     color: #555;
+}
+.equiposTitle{
+    text-align: center;
 }

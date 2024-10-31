@@ -1,5 +1,11 @@
-body{
+.appContainer{
   background-color: var(--color6);
+  transition: ease all 1s;
+}
+.appContainer-darkmode{
+   background-color: #525252;
+   color: white;
+   transition: ease all 1s;
 }
 
 .title{
@@ -18,14 +24,23 @@ body{
   top: 0px;
   position: fixed;
   z-index: 100;
+  transition: ease all 1s;
+}
+.titleContainer.darkMode{
+  background-color: #222;
+  transition: ease all 1s;
+}
+.titleDark{
+  font-size: 2rem;
+  color: white;
 }
 .navBarPagesContainer{
   margin-top: 10vh;
   margin-left:15vw;
   display: flex;
-  height: 90vh;
+  min-height: 90vh;
 }
 .pages{
-  height: 100%;
+
   width: 100%;
 }
