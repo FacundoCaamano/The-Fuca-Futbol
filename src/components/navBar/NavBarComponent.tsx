@@ -7,14 +7,30 @@ import { useState } from 'react';
 export const NavBar = () => {
     const { isDarkMode, toggleTheme } = useTheme();
     const [rotating, setRotating] = useState(false);
+    const viewPort = window.innerWidth
+    const [openNavBar, setOpenNavBar] = useState(false)
+    console.log(viewPort);
+    
 
-  const handleClick = () => {
-    setRotating(true); // Activa la animación
-    toggleTheme(); // Cambia el tema
-    setTimeout(() => setRotating(false), 500); // Desactiva la animación después de 0.5s
-  };
+    const handleClick = () => {
+        setRotating(true); 
+        toggleTheme(); 
+        setTimeout(() => setRotating(false), 500);
+    };
+    const ClicknavBar=()=>{
+        setOpenNavBar(!openNavBar)
+    }
+    const navClass = `${
+        isDarkMode ? (viewPort > 800 ? 'navBar-darkMode' : 'navBar-darkMode-mobile') 
+                   : (viewPort > 800 ? 'navBar' : 'navBarMobile')
+    } ${openNavBar ? '' : 'closed'}`; 
     return(
-        <nav className={isDarkMode ? "navBar-darkMode" : "navBar"}>
+        <>
+            {
+                viewPort > 800 ? '' :
+                <button className='btn_menu' onClick={ClicknavBar}>Menu</button>
+            }
+        <nav className={navClass}>
             <ul>
                 <NavLink to="/home"
                        className={({ isActive }) => (isActive ? 'active' : 'disabled')}>
@@ -40,9 +56,10 @@ export const NavBar = () => {
                      onClick={handleClick}
                      src={isDarkMode ? luna : sol}
                      alt="Toggle Theme"
-                    />
+                     />
                 </li>
             </ul>
         </nav>
+                     </>
     )
 }
