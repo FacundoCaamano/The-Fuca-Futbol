@@ -157,3 +157,25 @@ tr:nth-child(even) {
 .equiposTitle{
     text-align: center;
 }
+
+@media screen and (max-width:800px) {
+    .players-grid{
+        width: 95vw;
+    }
+    table {
+        width: 99vw;
+        .trDark{
+            max-width: 99vw;
+            th{
+                font-size: 10px;
+            }
+        }
+    }
+    th, td {
+        padding: 0px;
+        
+    }
+   tbody{
+    font-size: 10px;
+   }
+}

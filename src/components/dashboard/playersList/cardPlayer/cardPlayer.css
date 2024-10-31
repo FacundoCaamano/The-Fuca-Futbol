@@ -1,3 +1,6 @@
+.modal{
+    z-index: 4000;
+}
 .cardPlayer {
     background: linear-gradient(135deg, var(--color4 ), var(--color3));
     padding: 20px;
