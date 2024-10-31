@@ -9,8 +9,7 @@ export const NavBar = () => {
     const [rotating, setRotating] = useState(false);
     const viewPort = window.innerWidth
     const [openNavBar, setOpenNavBar] = useState(false)
-    console.log(viewPort);
-    
+ 
 
     const handleClick = () => {
         setRotating(true); 

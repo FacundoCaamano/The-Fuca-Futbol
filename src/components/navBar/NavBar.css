@@ -3,9 +3,10 @@
     padding: 10px;
     border-radius: 5px;
     border-style: initial;
-    position: absolute;
-    left: 10px;
-    z-index: 100;
+    position: fixed;
+    left: 0px;
+    z-index: 2000;
+    color: white;
 }
 .navBar{
     height: 100%;
@@ -79,6 +80,7 @@
         position: fixed;
         box-shadow: inset;
         transition: ease all 1s;
+        
         ul{
             width: 40vw;
             padding: 10px 0 0 0px;
@@ -101,6 +103,7 @@
     position: fixed;
     box-shadow: inset;
     transition: ease all 1s;
+    z-index: 1000;
     ul{
         width: 40vw;
         padding: 10px 0 0 0px;

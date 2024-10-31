@@ -4,6 +4,12 @@
     flex-direction: column;
     gap: 50px;
 }
+.caja1{
+    border-bottom: 1px solid  black;
+    border-top: 1px solid  black;
+    margin: 10px;
+    padding: 10px;
+}
 .cardDashboard{
     border: 1px solid var(--color4);
     border-style: initial;

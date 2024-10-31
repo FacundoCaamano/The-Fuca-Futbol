@@ -44,3 +44,12 @@
 
   width: 100%;
 }
+@media screen and (max-width:800px) {
+  .navBarPagesContainer{
+    margin-left:0vw;
+  }
+  .pages{
+    margin-top: 5vh;
+    width: 100%;
+  }
+}
