@@ -94,7 +94,7 @@ export const ModalComponent=()=>{
                                 </div>
                             </div>
                         <div className="modal-footer">
-                            <button  className="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+                            <button type='button' className="btn btn-success" data-bs-dismiss="modal" >Cerrar</button>
                             <button type='submit' className="btn btn-success" >Crear</button>
                          </div>
                         </form>

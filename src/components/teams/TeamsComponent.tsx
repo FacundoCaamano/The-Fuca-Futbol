@@ -13,7 +13,7 @@ export const TeamsComponent = () =>{
     
     return(
         <>
-             <h3>crear equipos</h3>
+            
             <div className="players">
             <h3>Selecciona a los participantes</h3>
             {
