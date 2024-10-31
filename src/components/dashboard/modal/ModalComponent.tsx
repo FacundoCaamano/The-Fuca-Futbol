@@ -3,8 +3,10 @@ import { useContext } from 'react'
 import './Modal.css'
 import { PlayersContext } from '../../../context/PlayersContext'
 import { generateId } from '../../../utils/idGenerator';
+import { useTheme } from '../../../context/ThemeContext';
 export const ModalComponent=()=>{
     const context = useContext(PlayersContext);
+    const {isDarkMode} = useTheme()
     if (!context) {
         return <div>Error: Contexto no encontrado</div>;
     }
@@ -30,7 +32,7 @@ export const ModalComponent=()=>{
         <>
             <div className="modal fade" id="modalNewPlayer"  aria-labelledby="modalNewPlayer" aria-hidden="true">
                 <div className="modal-dialog">
-                    <div className="modal-content">
+                    <div className={isDarkMode ? "modal-content dark" :"modal-content"}>
                         <form className='form' onSubmit={formSubmit} >
                             <div className="modal-header">
                                 <h1 className="modal-title fs-5" id="exampleModalLabel">Nuevo Jugador</h1>

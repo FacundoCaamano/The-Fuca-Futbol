@@ -1,4 +1,16 @@
+.modal-content.dark{
+    background-color: var(--color4);
+    input{
+        color: white;
+    }
+    select{
+        color: white;
+        option{
+            background-color: var(--color3);
+        }
+    }
 
+}
 
 .modal-header{
     display: flex;

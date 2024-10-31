@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Player } from "../../../../models/player"
 import './cardPlayer.css'
 import { PlayersContext } from "../../../../context/PlayersContext";
+import { useTheme } from "../../../../context/ThemeContext";
 interface CardPlayerProps {
     player: Player;
 }
@@ -12,6 +13,7 @@ export const CardPlayerComponent = ({player}:CardPlayerProps) => {
     const [isEditingPlayer, setIsEditingPlayer] = useState(false)
     const [editedPlayer, setEditedPlayer] = useState<Player>(player)
     const [selectedPlayer, setSelectPlayer] = useState<Player>()
+    const {isDarkMode} = useTheme()
     const context = useContext(PlayersContext)
     function ModalDeleteCard() {
         setSelectPlayer(player)
@@ -40,7 +42,7 @@ export const CardPlayerComponent = ({player}:CardPlayerProps) => {
         <>
             <div className="modal fade" id={`deleteModal-${player.id}`}>
                 <div className="modal-dialog">
-                    <div className="modal-content">
+                    <div className={isDarkMode ? "modal-content dark" :"modal-content"}>
                         <div className="modal-header">
                             <h1 className="modal-title fs-5" id="exampleModalLabel">Desea borrar a {selectedPlayer?.nombre}?</h1>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
