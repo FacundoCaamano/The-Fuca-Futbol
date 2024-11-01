@@ -30,6 +30,11 @@ export const NavBar = () => {
                 <button className='btn_menu' onClick={ClicknavBar}>Menu</button>
             }
         <nav className={navClass}>
+            { viewPort > 800 ? '' :
+                <div className='btn_close--container'>
+                <button className='btn_close' onClick={ClicknavBar}>X</button>
+            </div>
+            }
             <ul>
                 <NavLink to="/home"
                        className={({ isActive }) => (isActive ? 'active' : 'disabled')}>

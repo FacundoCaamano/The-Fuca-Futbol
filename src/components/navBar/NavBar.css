@@ -1,13 +1,4 @@
-.btn_menu{
-    background-color: var(--color3);
-    padding: 10px;
-    border-radius: 5px;
-    border-style: initial;
-    position: fixed;
-    left: 0px;
-    z-index: 2000;
-    color: white;
-}
+
 .navBar{
     height: 100%;
     box-shadow: 0.2px 0px #575757;
@@ -70,6 +61,28 @@
   }
 
 @media screen and (max-width:800px) {
+    .btn_menu{
+        background-color: var(--color3);
+        padding: 10px;
+        border-radius: 5px;
+        border-style: initial;
+        position: fixed;
+        top: 2vh;
+        left: 2vw;
+        z-index: 2000;
+        color: white;
+    }
+    .btn_close--container{
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 10px;
+    }
+    .btn_close{
+        background-color: var(--color1);
+        border-radius: 5px;
+        border-style: initial;
+        width: 50px;
+    }
     .navBarMobile{
         padding-top: 50px;
         height: 100%;
@@ -80,7 +93,7 @@
         position: fixed;
         box-shadow: inset;
         transition: ease all 1s;
-        
+        z-index: 1000;
         ul{
             width: 40vw;
             padding: 10px 0 0 0px;

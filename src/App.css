@@ -52,4 +52,9 @@
     margin-top: 5vh;
     width: 100%;
   }
+  .titleContainer{
+    justify-content: center;
+    gap: 0px;
+    padding: 0px;
+  }
 }
